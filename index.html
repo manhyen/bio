@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#d2aaff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chia sẻ miễn phí các module Shadowrocket cao cấp như YouTube Premium, Locket Gold, SoundCloud Go+, Wink VIP,... Cùng nhiều app mod cho iOS và Android.">
+  <meta name="keywords" content="module Shadowrocket, mod iOS, app mod Android, YouTube Premium, Locket Gold, SoundCloud Go+, Wink VIP, tải app miễn phí">
+  <meta name="author" content="Yenisme">
+  <link rel="icon" href="https://imglink.io/i/84ce640b-871f-4e4f-b7b3-33c0a488fadd.jpg" type="image/x-icon" />
+  <title>Bio của Yên đẹp Zaii anh em nhó !</title>
+    <!-- Favicon -->
+  <link rel="icon" href="https://sv2.anhsieuviet.com/2025/08/05/Picsart_25-08-05_17-43-55-461.png" type="image/png">
+  <!-- Import font + icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<!-- icon paymenn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Thư viện Font Awesome 6 để dùng icon hiện đại như "copy" -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
+  <!-- Thư viện jQuery (rất quan trọng cho gõ chữ động) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Hiệu ứng nền hạt -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f0c29);
+      background-size: 400% 400%;
+      animation: gradientMove 20s ease infinite;
+      color: #fff;
+      padding: 2rem 1rem;
+    }
+
+    /* Hiệu ứng chuyển động nền */
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Container căn giữa toàn bộ nội dung */
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #ffcbff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    
+
+    a {
+      color: #ffd1ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      color: #9FB6CD;
+      text-align: center;
+    }
+
+    /* Nền hạt */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  /* Hiệu ứng chuyển màu chữ */
+  .username {
+    font-style: italic;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  }
+  /* Hiệu ứng chữ chuyển màu hồng - tím nhạt */
+  .animated-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ff8af2, #a18bff, #8cf3ff, #ff8af2);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pinkFade 4s ease infinite;
+    margin-bottom: 20px;
+  }
+
+  @keyframes pinkFade {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  /*thong bao khi sao chep module*/
+  .toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #ffb3ff, #d2aaff);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  box-shadow: 0 4px 20px rgba(210, 170, 255, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+  backdrop-filter: blur(6px);
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+  .toast.show {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+  #toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #a077ff, #e2b3ff);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 18px;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 0 18px rgba(255, 200, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+}
+
+#toast.show {
+  opacity: 1;
+}
+@keyframes fadeInUp {
+  0% {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+  /*payment*/ 
+  .payment-section {
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 16px;
+
+  /* Nền mờ nhẹ */
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+
+  /* Viền tím hồng phát sáng */
+  border: 2px solid rgba(210, 170, 255, 0.4);
+  box-shadow: 
+    0 0 12px rgba(210, 170, 255, 0.5),
+    0 0 24px rgba(210, 170, 255, 0.2),
+    inset 0 0 8px rgba(210, 170, 255, 0.1);
+}
+  .payment-section:hover {
+  box-shadow: 
+    0 0 16px rgba(210, 170, 255, 0.7),
+    0 0 32px rgba(210, 170, 255, 0.3),
+    inset 0 0 12px rgba(210, 170, 255, 0.15);
+}
+
+.payment-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #8e6cff, #00f0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.payment-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border-radius: 12px;
+
+  /* Thêm viền đậm tím nhạt */
+  border: 2px solid rgba(210, 170, 255, 0.5);
+
+  /* Giữ lại bóng nhẹ nếu bạn thích */
+  box-shadow: 0 0 10px rgba(210, 170, 255, 0.2);
+}
+  .payment-card:hover {
+  border-color: #e0b3ff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+  .bank-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  margin-right: 16px;
+  object-fit: contain;
+}
+
+.payment-info {
+  flex-grow: 1;
+  color: #fff;
+}
+
+.payment-info span {
+  display: block;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 2px;
+}
+
+.account-number {
+  margin-top: 6px;
+  color: #00ffe0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+  /* app */
+    .app-list {
+    border: 2px solid rgba(210, 170, 255, 0.3);
+    border-radius: 20px;
+    padding: 24px;
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 0 30px rgba(210, 170, 255, 0.2);
+  }
+
+  .app-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    flex-wrap: nowrap;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .app-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .app-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  }
+
+  .app-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .app-desc {
+    font-size: 13px;
+    color: #bbb;
+    margin: 4px 0;
+  }
+
+  .app-tag {
+    background-color: #007bff;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 11px;
+    width: fit-content;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .download-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: white;
+    color: #111;
+    border: none;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .download-btn:hover {
+    background: #f1f1f1;
+    transform: scale(1.03);
+  }
+
+.download-btn .icon {
+  font-size: 16px;
+}
+  /*Khoi gioi thieu*/
+  .intro-section {
+  background: #0f0f0f;
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 20px rgba(128, 0, 255, 0.2);
+  margin-bottom: 32px;
+}
+
+.intro-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+  .intro-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  line-height: 1;
+  transform: translateY(1px); /* căn chỉnh lại nhẹ cho cân đối */
+}
+
+.avatar-box {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-imgg {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  box-shadow: 0 0 10px #d18cff; /* Viền phát sáng */
+background-image: linear-gradient(#0f0f0f, #0f0f0f), linear-gradient(to right, #ff7de9, #b89cff);
+background-origin: border-box;
+background-clip: content-box, border-box;
+}
+
+@keyframes avatarGlow {
+  0%   { box-shadow: 0 0 10px #ff8aff; }
+  50%  { box-shadow: 0 0 18px #c97fff; }
+  100% { box-shadow: 0 0 10px #e277ff; }
+}
+
+.intro-name {
+  margin-top: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.name-gradient {
+  background: linear-gradient(90deg, #fdee00, #0f0, #00f, #f0f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+  .verified-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 4px;
+  border-radius: 4px;
+}
+
+.intro-desc {
+  color: #bbb;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.intro-note {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-top: 18px;
+  color: white;
+  font-size: 14px;
+}
+
+.intro-note a {
+  color: #ff00cc;
+  font-weight: bold;
+  text-decoration: none;
+}
+  /*Chu Khong Manh Yen rainbow*/
+  .gradient-name {
+  font-weight: bold;
+  font-size: 20px;
+  background: linear-gradient(90deg, #ff8af2, #a18bff, #8cf3ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowMove 2s ease infinite;
+}
+
+@keyframes glowMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+  /*Nut module dep*/
+   .module-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/*Lam lai Phan module*/
+  .module-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff0d;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #ffffff22;
+  margin-bottom: 12px;
+}
+
+.module-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.module-info {
+  flex: 1;
+  margin-left: 12px;
+  color: #fff;
+}
+
+.module-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.module-desc {
+  font-size: 13px;
+  margin: 2px 0 0 0;
+  opacity: 0.8;
+}
+
+.copy-button {
+  background: #ffffff1a;
+  color: #fff;
+  border: 1px solid #ffffff33;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+  background: #ffffff33;
+}
+/*end*/
+.module-text {
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #00eaff, #ff00f7, #a6db4d, #e60026, #ff7538);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s infinite linear;
+}
+
+@keyframes shine {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.5); }
+  100% { filter: brightness(1); }
+}
+  /*Lien he*/
+
+.contact-title {
+  text-align: center;
+  color: #ffccff;
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* đẩy nút sang phải */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  transition: 0.3s;
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  margin-right: 12px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: white;
+}
+
+.contact-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.contact-btn {
+  padding: 8px 14px;
+  background: linear-gradient(90deg, #ff8af2, #a18bff);
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.contact-btn:hover {
+  background: #d2aaff;
+  color: #111;
+}
+  
+  .share-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.share-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255, 200, 255, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.share-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 200, 255, 0.9);
+}
+  /*Logo hentai*/
+  .glow-logo {
+  width: 30vw; /* Chiếm 20% chiều ngang màn hình */
+  max-width: 150px; /* Không quá to */
+  animation: float-glow 3s ease-in-out infinite;
+}
+
+.glow-logo img {
+  width: 100%;
+  height: auto;
+  border-radius: 0; /* Không bo góc để logo vuông nét rõ */
+}
+
+/* Hiệu ứng bay nhẹ nhàng */
+@keyframes float-glow {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+  
+  .app-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  flex-wrap: nowrap; /* ❗ Không cho xuống dòng */
+}
+
+.app-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.app-info {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.app-info h3 {
+  font-size: 16px;
+  margin: 0;
+  color: #fff;
+}
+
+.app-info p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #ccc;
+}
+
+.app-label {
+  display: inline-block;
+  font-size: 12px;
+  background-color: #2196f3;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.download-button {
+  background-color: #fff;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  white-space: nowrap; /* ❗ Giữ nút 1 dòng */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+  /*Go chu*/
+ .typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Darker Grotesque', sans-serif;
+    margin-top: 20px;
+  }
+
+  #feature-text {
+    margin-left: 8px;
+  }
+
+  .input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 42px;
+    background-color: white;
+    margin-left: 8px;
+    animation: blink .6s linear infinite alternate;
+  }
+
+  @keyframes blink {
+    0% { opacity: 1; }
+    40% { opacity: 1; }
+    60% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+  
+
+  /* Nút Star on GitHub - từ Uiverse.io */
+.button {
+  font-family: Inter, sans-serif;
+  cursor: pointer;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background: #111111;
+}
+
+.button:active {
+  transform: scale(1);
+}
+
+.button:hover .icon {
+  fill: #ffff00;
+  transform: rotate(360deg);
+  transition: all 0.5s ease;
+  filter: drop-shadow(0 0 5px rgba(255, 208, 0, 0.8)) drop-shadow(0 0 10px rgba(255, 208, 0, 0.6));
+}
+
+.button:hover .text {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+}
+
+.text {
+  transition: all 1s ease;
+}
+
+.icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-top: -3px;
+  transition: all 1s ease;
+}
+  /* Căn giữa nút Star */
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px; /* chỉnh khoảng cách từ trên xuống nếu cần */
+}
+  /*Loading*/
+  #loading {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 9999;
+}
+
+  #loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #loading img {
+  width: 240px; /* tăng kích thước tại đây */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+  .glitch {
+    position: relative;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    letter-spacing: 5px;
+    z-index: 1;
+    animation: shift 1s ease-in-out infinite alternate;
+  }
+
+  .glitch:before,
+  .glitch:after {
+    display: block;
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+  }
+
+  .glitch:before {
+    animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    color: #8b00ff;
+    z-index: -1;
+  }
+
+  .glitch:after {
+    animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    color: #00e571;
+    z-index: -2;
+  }
+
+  @keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-3px, 3px); }
+    40% { transform: translate(-3px, -3px); }
+    60% { transform: translate(3px, 3px); }
+    80% { transform: translate(3px, -3px); }
+    100% { transform: translate(0); }
+  }
+
+  @keyframes shift {
+    0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100% {
+      transform: skewX(0deg);
+    }
+    41% { transform: skewX(10deg); }
+    42% { transform: skewX(-10deg); }
+    59% { transform: skewX(40deg) skewY(10deg); }
+    60% { transform: skewX(-40deg) skewY(-10deg); }
+    63% { transform: skewX(10deg) skewY(-5deg); }
+    70% { transform: skewX(-50deg) skewY(-20deg); }
+    71% { transform: skewX(10deg) skewY(-10deg); }
+  }
+  /*Nuts thue id*/
+      .shadowrocket-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+    margin-top: 16px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .shadowrocket-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #a777e3, #6e8efb);
+  }
+  /*Luu y khi tai show bang id*/
+  .info-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #6dd5fa, #b6fbff);
+    color: #202020;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+    margin-top: 16px;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .info-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #b6fbff, #6dd5fa);
+  }
+
+  .notice-box {
+    margin: 20px auto;
+    max-width: 90%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid #ffffff33;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+  }
+</style>
+</head>
+<body>
+
+   <div id="loading">
+    <img src="https://hentaiz.icu/wp-content/uploads/logo_RHOHYSA.png" alt="logo">
+    <div data-glitch="tTích cực quay tay vận may sẽ đến🤨." class="glitch">Tích cực quay tay vận may sẽ đến🤨.</div>
+  </div>
+  <!-- chặn chuột phải -->
+  <body oncontextmenu="return false;">
+  <button class="share-button" onclick="shareSite()">
+  <img src="https://imglink.io/i/d674d7a4-211f-4d5d-b6c2-3a5914613c05.jpg" class="share-icon" alt="Chia sẻ">
+</button>
+    
+  <!-- Logo phát sáng góc trái -->
+<div class="glow-logo">
+  <img src="https://hentaiz.icu/wp-content/uploads/logo_RHOHYSA.png" alt="Logo" />
+</div>
+  <!-- Nền hạt -->
+  <div id="particles-js"></div>
+
+  <div class="intro-section" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 20px; text-align: center; box-shadow: 0 0 20px rgba(0, 187, 255, 0.12); margin-bottom: 24px;">
+  <h2 style="font-size: 20px; font-weight: bold; color: LightBlue; margin-bottom: 12px;">YEN 210 V2</h2>
+  <div style="display: flex; justify-content: center;">
+    <img src="https://imglink.io/i/84ce640b-871f-4e4f-b7b3-33c0a488fadd.jpg" alt="Avatar" class="avatar-imgg">
+  </div>
+  <h3 class="intro-name">
+  <span class="gradient-name">Khong Manh Yen</span>
+<img src="https://i.imgur.com/RIo7BiY.gif" alt="verified" class="verified-icon">
+</h3>
+      <!-- dang go chu  -->
+    <div class="typing-container">
+  <span id="sentence" class="sentence">And I'm a</span>
+  <span id="feature-text"></span>
+  <span class="input-cursor"></span>
+</div>
+  <p style="color: #aaa; font-size: 14px; margin: 4px 0 16px;">Kho ứng dụng apk,ipa,modules Shadowrocket miễn phí</p>
+  <div style="background: rgba(255, 255, 255, 0.06); border-radius: 12px; padding: 12px 16px; font-size: 14px; color: white; border: 1px solid rgba(255, 255, 255, 0.1);">
+    Nếu chưa có chứng chỉ để tải app từ file IPA hãy Liên Hệ với tui <span style="color: #ff45d3; font-weight: bold;">Qua mxh Bên dưới</span> để mua!
+  </div>
+</div>
+  
+  <!-- Nội dung chính -->
+  <div class="container">
+    <h1 class="animated-title"><i class="fa-solid fa-thumbs-up"></i> Bộ sưu tập modules by <span class="username"><b>@yenver2</b></span></h1>
+    <!-- Contact -->
+    <div class="app-list">
+  <h2 class="contact-title">Liên Hệ Với Mình Qua Mạng Xã Hội bên dưới🥰</h2>
+      <p style="color: #FF00CC; font-size: 14px; font-weight: 500; text-shadow: 0 0 4px #5555ff;">
+  📱 Nơi tư bản làm việc ib thì cứ thêm vài chữ "<b>Mình sẽ trả phí</b>"là được😋
+</p>
+      <div class="contact-card">
+    <img src="https://play-lh.googleusercontent.com/VRMWkE5p3CkWhJs6nv-9ZsLAs1QOg5ob1_3qg-rckwYW7yp1fMrYZqnEFpk0IoVP4LM=w480-h960-rw" class="contact-icon" alt="Facebook">
+    <div class="contact-info">
+      <div class="contact-name">Instagram</div>
+      <a href="https://www.instagram.com/_htkt.15th3._" target="_blank" class="contact-btn"><i class="fa-brands fa-instagram"></i> ig:_htkt.15th3._</a>
+    </div>
+  </div>
+      
+  <div class="contact-card">
+    <img src="https://play-lh.googleusercontent.com/ZU9cSsyIJZo6Oy7HTHiEPwZg0m2Crep-d5ZrfajqtsH-qgUXSqKpNA2FpPDTn-7qA5Q=w480-h960-rw" class="contact-icon" alt="Telegram">
+    <div class="contact-info">
+      <div class="contact-name">Telegram</div>
+      <a href="https://t.me/yenver2" target="_blank" class="contact-btn"><i class="fa fa-paper-plane"></i> T.me/yenver2</a>
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <img src="https://play-lh.googleusercontent.com/KCMTYuiTrKom4Vyf0G4foetVOwhKWzNbHWumV73IXexAIy5TTgZipL52WTt8ICL-oIo=w480-h960-rw" class="contact-icon" alt="Facebook">
+    <div class="contact-info">
+      <div class="contact-name">Facebook</div>
+      <a href="https://www.facebook.com/yen.ver2" target="_blank" class="contact-btn"><i class="fa-brands fa-facebook-f"></i> Khong Manh Yen🥑</a>
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <img src="https://play-lh.googleusercontent.com/rFIOt4fDSCgJh_FkHU2qP8YiZUUhfVoKoNfQFbPEM-Wl8zuyuwn7vzkEx_XMh5B6FfO3=w480-h960-rw" class="contact-icon" alt="Zalo">
+    <div class="contact-info">
+      <div class="contact-name">Zalo</div>
+      <a href="https://zalo.me/0328534467" target="_blank" class="contact-btn"><i class="fa fa-comment"></i> Khong Manh Yen𓄂</a>
+    </div>
+  </div>
+      <div class="contact-card">
+    <img src="https://play-lh.googleusercontent.com/KSuaRLiI_FlDP8cM4MzJ23ml3og5Hxb9AapaGTMZ2GgR103mvJ3AAnoOFz1yheeQBBI=w480-h960-rw" class="contact-icon" alt="Locket">
+    <div class="contact-info">
+      <div class="contact-name">E Mail</div>
+      <a href="mailto:manhyenver2@gmail.com" target="_blank" class="contact-btn"><i class="fa-solid fa-envelope"></i> manhyenver2@gmail.com</a>
+    </div>
+  </div>
+      <div class="contact-card">
+    <img src="https://sf-static.upanhlaylink.com/img/image_202507240a2cc671ac467110a76de23c53e4e6bd.jpg" class="contact-icon" alt="Locket">
+    <div class="contact-info">
+      <div class="contact-name">Locket Widget</div>
+      <a href="https://locket.cam/yenver2" target="_blank" class="contact-btn"><i class="fa-solid fa-heart"></i> Locket.cam/yenver2</a>
+    </div>
+  </div>
+      <!-- Nút Star on GitHub căn giữa -->
+<div style="text-align: center; margin-top: 40px;">
+  <button class="button" onclick="window.open('https://github.com/manhyen', '_blank')">
+    <span class="text"><i class="fa-brands fa-github"></i> Star on GitHub</span>
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 .587l3.668 7.568L24 9.75l-6 5.849L19.336 24 12 19.897 4.664 24 6 15.599 0 9.75l8.332-1.595z"/>
+    </svg>
+  </button>
+</div>
+</div>
+   
+      <div class="app-list">
+        <h2 class="contact-title"><i class="fa-solid fa-copyright"></i> Modules Shadowrocket =))</h2>
+        <p class="note">👉 Chúng ta thường phải trả phí với các dịch vụ xịn xò mở khóa các chức năng của Youtube premium, Spotify premium ..... v.v 
+
+Nhưng khi ta sử dụng ios thì vấn đề này lại dễ dàng giải quyết khi ta sử dụng các module để mở khóa các đặc quyền phải trả phí một cách dễ dàng miễn phí hoàn toàn </p>
+  <ul class="module-list">
+    <!-- Một module dạng thẻ đẹp như kho IPA -->
+<div class="module-card" data-copy="https://whatshub.top/module/YouTubeAd.sgmodule">
+  <div class="module-icon">
+    <img src="https://play-lh.googleusercontent.com/6am0i3walYwNLc08QOOhRJttQENNGkhlKajXSERf3JnPVRQczIyxw2w3DxeMRTOSdsY=w480-h960-rw" alt="Youtube" />
+  </div>
+  <div class="module-info">
+    <h3 class="module-text">Youtube</h3>
+    <p class="module-desc">Không có qc</p>
+  </div>
+  <button class="copy-button">
+    <i class="fa-solid fa-copy"></i> Sao chép
+  </button>
+</div>
+    <div class="module-card" data-copy="https://raw.githubusercontent.com/yenisme/KThy/main/Modules/Locket_Gold_Kthy.sgmodule">
+  <div class="module-icon">
+    <img src="https://sf-static.upanhlaylink.com/img/image_202507240a2cc671ac467110a76de23c53e4e6bd.jpg" alt="Locket" />
+  </div>
+  <div class="module-info">
+    <h3 class="module-text">Locket Gold</h3>
+    <p class="module-desc">Chia sẻ ảnh với bạn bè trong album</p>
+  </div>
+  <button class="copy-button">
+    <i class="fa-solid fa-copy"></i> Sao chép
+  </button>
+</div>
+    <div class="module-card" data-copy="https://whatshub.top/module/spotifyVIP.module">
+  <div class="module-icon">
+    <img src="https://play-lh.googleusercontent.com/7ynvVIRdhJNAngCg_GI7i8TtH8BqkJYmffeUHsG-mJOdzt1XLvGmbsKuc5Q1SInBjDKN=w240-h480-rw" alt="Spotify" />
+  </div>
+  <div class="module-info">
+    <h3 class="module-text">Spotify</h3>
+    <p class="module-desc">Premium với tất cả tính năng cao cấp</p>
+  </div>
+  <button class="copy-button">
+    <i class="fa-solid fa-copy"></i> Sao chép
+  </button>
+</div>
+    <div class="module-card" data-copy="https://whatshub.top/module/soundcloud.module">
+  <div class="module-icon">
+    <img src="https://play-lh.googleusercontent.com/JSSeB3XQtb9sHD5FWTqVM4AksY_Kg2q20eExenxGqPJZdn2uVQxi8eoHkP5MA-IR4w=w480-h960-rw" alt="SoundCloud" />
+  </div>
+  <div class="module-info">
+    <h3 class="module-text">Sound Cloud Go+</h3>
+    <p class="module-desc">Mở khóa các tính năng cao cấp</p>
+  </div>
+  <button class="copy-button">
+    <i class="fa-solid fa-copy"></i> Sao chép
+  </button>
+</div>
+    <div class="module-card" data-copy="https://whatshub.top/module/wink.module">
+  <div class="module-icon">
+    <img src="https://play-lh.googleusercontent.com/S5fv_OqAss3s02_dWNkbe1AUXWPyKH59hXs_rtflal39ThB7Pmze01Ur4AuKzs2dOBc" alt="WinkVip" />
+  </div>
+  <div class="module-info">
+    <h3 class="module-text">Wink Vip</h3>
+    <p class="module-desc">Mở khóa các tính năng cao cấp</p>
+  </div>
+  <button class="copy-button">
+    <i class="fa-solid fa-copy"></i> Sao chép
+  </button>
+</div>
+    <div class="module-card" data-copy="https://whatshub.top/module/lightroom.module">
+  <div class="module-icon">
+    <img src="https://play-lh.googleusercontent.com/RGvuFCqPOIiR1i9QDN6-HNt5nOuWj4zuqQduxnJn0ughdo-yhAJNG1r6W1A3Fc6Z9w" alt="Lightroom" />
+  </div>
+  <div class="module-info">
+    <h3 class="module-text">LightRoom</h3>
+    <p class="module-desc">Mở khóa các tính năng cao cấp</p>
+  </div>
+  <button class="copy-button">
+    <i class="fa-solid fa-copy"></i> Sao chép
+  </button>
+</div>
+   <a href="https://thueidgiare.com/" target="_blank" class="shadowrocket-button">
+  Thuê ID tải Shadowrocket, Mua 4G VPN(Không phải web của mình nhé😗)
+</a>
+    <!-- Nút hiện thông báo -->
+<button class="info-button" onclick="showNotice()">
+  ⚠️ Lưu ý trước khi tải Shadowrocket
+</button>
+
+<!-- Popup thông báo -->
+<div id="notice-box" class="notice-box" style="display: none;">
+  Bạn cần phải có sẵn app Shadowrocket ở máy.<br>
+  Nếu chưa có hãy lên AppStore tìm và tải với giá <strong>79.000vnđ</strong>,<br>
+  hoặc có thể <strong>thuê ID Apple</strong> hoặc <strong>kiếm ID Apple free</strong> để tải Shadowrocket nhé 😉Tùy anh em,nếu không thì liên hệ mình qua mxh bên trên để đc hỗ trợ😁<br><br>
+  <em>Free nên anh em không đòi hỏi nhé 🥴</em>
+</div>
+    
+  
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+  <!-- Thêm module khác tương tự -->
+    <p class="note">👉 Nhấn vào tên module để sao chép liên kết và thêm vào Shadowrocket.</p>
+  </div>
+<div class="app-list">
+  <h2 style="text-align: center; color: #d2aaff; margin-bottom: 1rem;"><i class="fa-brands fa-app-store"></i> App Game dành cho IOS(Iphone)</h2>
+  <p style="color: #aaaaff; font-size: 14px; font-weight: 500; text-shadow: 0 0 4px #5555ff;">
+  📱 Tổng hợp app,game đã được mod thêm tính năng cho iOS.
+</p>
+  
+  <!-- Example app card -->
+  <!-- App 1 -->
+  <div class="app-card">
+    <div class="left">
+      <img src="https://play-lh.googleusercontent.com/zD8UA5CRdiPzbvTwGKtzR4KjQpxqEK6X0tGDpzEaOo0xPEvG6HUiC_0qkpTfzpuMTqU=w480-h960-rw" class="app-icon" />
+      <div class="app-info">
+        <div class="app-title">Youtube Music</div>
+        <div class="app-desc">Chức năng đã thêm:  Nhieu chuc nang hay</div>
+        <span class="app-tag">APP</span>
+      </div>
+    </div>
+    <div class="right">
+      <a class="download-btn" href="https://github.com/apptesters-org/AppTesters_Repo/releases/download/06-08-2025/YouTubeMusic_8.31.2_Premium_%40thisismanpreets_apptesters.org.ipa" target="_blank"><i class="fa fa-download"></i></a>
+    </div>
+  </div>
+  
+ <div class="app-card">
+    <div class="left">
+      <img src="https://sf-static.upanhlaylink.com/img/image_202507240a2cc671ac467110a76de23c53e4e6bd.jpg" class="app-icon" />
+      <div class="app-info">
+        <div class="app-title">Locket Gold</div>
+        <div class="app-desc">Chức năng đã thêm:  Mo khoa tinh nang Gold</div>
+        <span class="app-tag">APP</span>
+      </div>
+    </div>
+    <div class="right">
+      <a class="download-btn" href="https://github.com/apptesters-org/AppTesters_Repo/releases/download/01-08-2025/Locket_2.7.1_Gold_%40thisismanpreets_apptesters.org.ipa" target="_blank"><i class="fa fa-download"></i></a>
+    </div>
+ </div>
+  
+  <div class="app-card">
+    <div class="left">
+      <img src="https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.b612.png" class="app-icon" />
+      <div class="app-info">
+        <div class="app-title">B612</div>
+        <div class="app-desc">Chức năng đã thêm:  Subscription Unlocked</div>
+        <span class="app-tag">APP</span>
+      </div>
+    </div>
+    <div class="right">
+      <a class="download-btn" href="https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.linecorp.b612.png" target="_blank"><i class="fa fa-download"></i></a>
+    </div>
+  </div>
+  <div class="app-card">
+    <div class="left">
+      <img src="https://play-lh.googleusercontent.com/KCMTYuiTrKom4Vyf0G4foetVOwhKWzNbHWumV73IXexAIy5TTgZipL52WTt8ICL-oIo=w480-h960-rw" class="app-icon" />
+      <div class="app-info">
+        <div class="app-title">Facebook Glow</div>
+        <div class="app-desc">Chức năng đã thêm:  Tải Story,Video,ko hiện đã xem story</div>
+        <span class="app-tag">APP</span>
+      </div>
+    </div>
+    <div class="right">
+      <a class="download-btn" href="https://github.com/apptesters-org/AppTesters_Repo/releases/download/02-08-2025/Facebook_524.1.0_Premium_%40thisismanpreets_apptesters.org.ipa" target="_blank"><i class="fa fa-download"></i></a>
+    </div>
+  </div>
+  <div class="app-card">
+    <div class="left">
+      <img src="https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.zhiliaoapp.musically.png" class="app-icon" />
+      <div class="app-info">
+        <div class="app-title">TikTok Plus</div>
+        <div class="app-desc">Chức năng đã thêm:  Mo khoa tinh nang xin xo</div>
+        <span class="app-tag">APP</span>
+      </div>
+    </div>
+    <div class="right">
+      <a class="download-btn" href="https://github.com/apptesters-org/AppTesters_Repo/releases/download/06-08-2025/BHTikTokPlus_40.9.0_Plus_%40thisismanpreets_apptesters.org.ipa" target="_blank"><i class="fa fa-download"></i></a>
+    </div>
+ </div>
+  <div class="app-card">
+    <div class="left">
+      <img src="https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.picsart.studio.png" class="app-icon" />
+      <div class="app-info">
+        <div class="app-title">Picart</div>
+        <div class="app-desc">Chức năng đã thêm:  Subscription Unlocked</div>
+        <span class="app-tag">APP</span>
+      </div>
+    </div>  
+    <div class="right">
+      <a class="download-btn" href="https://github.com/apptesters-org/AppTesters_Repo/releases/download/31-07-2025/PicsArt_28.0.4_Subscription_Unlocked_%40thisismanpreets_apptesters.org.ipa" target="_blank"><i class="fa fa-download"></i></a>
+    </div>
+  </div>
+  <div class="app-card">
+    <div class="left">
+      <img src="https://play-lh.googleusercontent.com/RdCklOFg3SLN5QF8OR7cU-5bs1ESYo_pqGYrK2ena3XZDcrLOpjf7vLtNQELOR7Uo4MH=w480-h960-rw" class="app-icon" />
+      <div class="app-info">
+        <div class="app-title">VSCO</div>
+        <div class="app-desc">Chức năng đã thêm:  Subscription Unlocked</div>
+        <span class="app-tag">APP</span>
+      </div>
+    </div>
+    <div class="right">
+      <a class="download-btn" href=https://github.com/apptesters-org/AppTesters_Repo/releases/download/31-07-2025/VSCO_434.0.1_Subscription_Unlocked_%40thisismanpreets_apptesters.org.ipa target="_blank"><i class="fa fa-download"></i></a>
+    </div>
+  </div>
+  <div class="app-card">
+    <div class="left">
+      <img src="https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/dazz.camera.vintagecamera.png" class="app-icon" />
+      <div class="app-info">
+        <div class="app-title">DazzCam</div>
+        <div class="app-desc">Chức năng đã thêm:  Mo khoa tinh nang Pro</div>
+        <span class="app-tag">APP</span>
+      </div>
+    </div>
+    <div class="right">
+      <a class="download-btn" href="https://github.com/apptesters-org/AppTesters_Repo/releases/download/06-08-2025/Dazz_2.9.14_Pro_%40thisismanpreets_apptesters.org.ipa" target="_blank"><i class="fa fa-download"></i></a>
+    </div>
+ </div>
+  <div class="app-card">
+    <div class="left">
+      <img src="https://raw.githubusercontent.com/apptesters-org/AppTesters_Repo/main/icons/com.sfun.snapedit.png" class="app-icon" />
+      <div class="app-info">
+        <div class="app-title">SnapEdit</div>
+        <div class="app-desc">Chức năng đã thêm:  Mo khoa tinh nang Pro</div>
+        <span class="app-tag">APP</span>
+      </div>
+    </div>
+    <div class="right">
+      <a class="download-btn" href="https://github.com/apptesters-org/AppTesters_Repo/releases/download/26-07-2025/SnapEdit_5.9.7_Pro_%40thisismanpreets_apptesters.org.ipa" target="_blank"><i class="fa fa-download"></i></a>
+    </div>
+ </div>
+</div>
+  <div class="app-list">
+   <h2 style="text-align: center; color: #d2aaff; margin-bottom: 1rem;"><i class="fa-brands fa-google-play"></i> App Game dành cho Adr(Android)</h2>
+  <p style="color: #aaaaff; font-size: 14px; font-weight: 500; text-shadow: 0 0 4px #5555ff;">
+  📱 Tổng hợp app,game đã được mod thêm tính năng cho Adr.
+</p>
+  
+  <!-- Example app card -->
+  <!-- App 1 -->
+  <div class="app-card">
+    <div class="left">
+      <img src="https://sf-static.upanhlaylink.com/img/image_20250724985bae3d8530f074f7b39fe91ae86086.jpg" class="app-icon" />
+      <div class="app-info">
+        <div class="app-title">Liên Quân Mobile</div>
+        <div class="app-desc">Chức năng đã thêm:  Hack Map</div>
+        <span class="app-tag">GAME</span>
+      </div>
+    </div>
+    <div class="right">
+      <a class="download-btn" href="https://drive.google.com/file/d/19u5NDF5M6KK--0PQT7cznvy32F0KM9sg/view?usp=drivesdk" target="_blank"><i class="fa fa-download"></i></a>
+    </div>
+  </div> 
+    <div class="app-card">
+    <div class="left">
+      <img src="https://sf-static.upanhlaylink.com/img/image_202507240a2cc671ac467110a76de23c53e4e6bd.jpg" class="app-icon" />
+      <div class="app-info">
+        <div class="app-title">Locket Gold</div>
+        <div class="app-desc">Chức năng đã thêm:  Mo khoa tinh nang Gold</div>
+        <span class="app-tag">APP</span>
+      </div>
+    </div>
+    <div class="right">
+      <a class="download-btn" href="https://mega.nz/file/VB41GBJI#ghYZ8Zl0PQ8J7hU1nXalqLIyOGhCCN56bI-hcXUngDk" target="_blank"><i class="fa fa-download"></i></a>
+    </div>
+ </div>
+    
+    
+</div>
+  <div class="payment-section">
+    
+  <h2 class="payment-title"><i class="fa fa-credit-card" style="font-size:24px"></i>Payment</h2>
+    <p style="color: #aaaaff; font-size: 14px; font-weight: 500; text-shadow: 0 0 4px #5555ff;">
+Bạn có thể cho mình xin ít 🌾 qua ngân hàng bằng cách gửi tiền đến số tài khoản hoặc quét mã QR. Chú ý ghi đúng nội dung      
+</p>
+
+  <div class="payment-card">
+    <img src="https://ibrand.vn/wp-content/uploads/2024/07/mbbank-logo-5.png" class="bank-logo" alt="MB Bank">
+    <div class="payment-info">
+      <strong>MB Bank</strong>
+      <span>KHONG MANH YEN</span>
+      <p class="account-number" data-copy="150313">150313 <i class="fa-solid fa-copy"style="color: #B197FC;"></i></p>
+
+    </div>
+  </div>
+  </div>
+
+  <!-- Tải nền hạt -->
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
+        "move": { "enable": true, "speed": 2 }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" },
+          "onclick": { "enable": true, "mode": "push" }
+        }
+      },
+      "retina_detect": true
+    });
+  /* sao cheps*/
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2500);
+  }
+
+  document.querySelectorAll('.copy-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const card = button.closest('.module-card');
+        const text = card.getAttribute('data-copy');
+
+        navigator.clipboard.writeText(text).then(() => {
+          const toast = document.getElementById('toast');
+          toast.textContent = '😜 Đã sao chép module❗️';
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 2500);
+        });
+      });
+    });
+
+// Xử lý click để sao chép số tài khoản trong .account-number
+document.querySelectorAll('.account-number').forEach(el => {
+  el.addEventListener('click', () => {
+    const acc = el.getAttribute('data-copy');
+    navigator.clipboard.writeText(acc).then(() => {
+      showToast("📋 Đã sao chép STK: " + acc);
+    }).catch(() => {
+      showToast("❌ Không thể sao chép!");
+    });
+  });
+});
+    
+  function shareSite() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Khám phá kho app VIP cực xịn!',
+        text: 'Vào đây chơi thử nè:',
+        url: window.location.href
+      }).catch((error) => console.log('Lỗi chia sẻ:', error));
+    } else {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        showToast("📋 Đã sao chép liên kết trang!");
+      });
+    }
+  }
+   
+  const carouselText = [
+    { text: "Student", color: "red" },
+    { text: "Designer", color: "orange" },
+    { text: "Seller", color: "MediumOrchid" },
+    { text: "Developer", color: "yellow" },
+    { text: "Modder", color: "hotpink" },
+    { text: "iOS Hacker Lỏ", color: "cyan" }
+  ];
+
+  $(document).ready(async function () {
+    carousel(carouselText, "#feature-text");
+  });
+
+  async function typeSentence(sentence, eleRef, delay = 100) {
+    const letters = sentence.split("");
+    for (let i = 0; i < letters.length; i++) {
+      await waitForMs(delay);
+      $(eleRef).append(letters[i]);
+    }
+  }
+
+  async function deleteSentence(eleRef) {
+    const sentence = $(eleRef).html();
+    const letters = sentence.split("");
+    while (letters.length > 0) {
+      await waitForMs(50);
+      letters.pop();
+      $(eleRef).html(letters.join(""));
+    }
+  }
+
+  async function carousel(carouselList, eleRef) {
+    let i = 0;
+    while (true) {
+      updateFontColor(eleRef, carouselList[i].color);
+      await typeSentence(carouselList[i].text, eleRef);
+      await waitForMs(1500);
+      await deleteSentence(eleRef);
+      await waitForMs(500);
+      i = (i + 1) % carouselList.length;
+    }
+  }
+
+  function updateFontColor(eleRef, color) {
+    $(eleRef).css("color", color);
+  }
+
+  function waitForMs(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+     // Ẩn loading sau 2s
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      document.getElementById('loading').classList.add('hidden');
+    }, 2000);
+  });
+    // Thoong bao luu y Shadow
+     function showNotice() {
+    var notice = document.getElementById("notice-box");
+    notice.style.display = (notice.style.display === "none") ? "block" : "none";
+  }
+        // Phan ki nawng
+        
+  const options = { threshold: 0.5 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.width = entry.target.dataset.width;
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  document.querySelectorAll('.progress-bar').forEach(bar => {
+    observer.observe(bar);
+  });
+  </script>
+  <div id="toast" class="toast">📋 Đã sao chép liên kết!</div>
+</body>
+</html> 
