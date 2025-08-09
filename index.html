@@ -7,7 +7,7 @@
   <meta name="description" content="Chia sẻ miễn phí các module Shadowrocket cao cấp như YouTube Premium, Locket Gold, SoundCloud Go+, Wink VIP,... Cùng nhiều app mod cho iOS và Android.">
   <meta name="keywords" content="module Shadowrocket, mod iOS, app mod Android, YouTube Premium, Locket Gold, SoundCloud Go+, Wink VIP, tải app miễn phí">
   <meta name="author" content="Yenisme">
-  <link rel="icon" href="https://imglink.io/i/84ce640b-871f-4e4f-b7b3-33c0a488fadd.jpg" type="image/x-icon" />
+
   <title>Bio của Yên đẹp Zaii anh em nhó !</title>
     <!-- Favicon -->
   <link rel="icon" href="https://sv2.anhsieuviet.com/2025/08/05/Picsart_25-08-05_17-43-55-461.png" type="image/png">
@@ -918,13 +918,19 @@ background-clip: content-box, border-box;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(8px);
   }
+ /* Không cho chọn (bôi đen) văn bản*/
+  body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
 </style>
 </head>
 <body>
 
    <div id="loading">
     <img src="https://hentaiz.icu/wp-content/uploads/logo_RHOHYSA.png" alt="logo">
-    <div data-glitch="tTích cực quay tay vận may sẽ đến🤨." class="glitch">Tích cực quay tay vận may sẽ đến🤨.</div>
+    <div data-glitch="Đang tải hãy kiên nhẫn nhé người ae🥱" class="glitch">Đang tải hãy kiên nhẫn nhé người ae🥱</div>
   </div>
   <!-- chặn chuột phải -->
   <body oncontextmenu="return false;">
@@ -1435,7 +1441,7 @@ document.querySelectorAll('.account-number').forEach(el => {
   window.addEventListener('load', function () {
     setTimeout(function () {
       document.getElementById('loading').classList.add('hidden');
-    }, 2000);
+    }, 1000);
   });
     // Thoong bao luu y Shadow
      function showNotice() {
@@ -1457,6 +1463,25 @@ document.querySelectorAll('.account-number').forEach(el => {
   document.querySelectorAll('.progress-bar').forEach(bar => {
     observer.observe(bar);
   });
+        //Chặn Ctrl+U, Ctrl+Shift+I, F12, Ctrl+C, v.v.
+        document.addEventListener('keydown', function(e) {
+  if (
+    e.ctrlKey && (e.key === 'u' || e.key === 'U') ||    // Ctrl+U
+    e.ctrlKey && (e.key === 's' || e.key === 'S') ||    // Ctrl+S
+    e.ctrlKey && e.shiftKey && e.key === 'I' ||         // Ctrl+Shift+I
+    e.ctrlKey && e.key === 'c' ||                       // Ctrl+C
+    e.key === 'F12'                                     // F12
+  ) {
+    e.preventDefault();
+    alert("Không được phép sử dụng phím tắt này!");
+  }
+});
+        //Chặn kéo-thả, copy-drag hình ảnh
+        document.addEventListener('dragstart', e => e.preventDefault());
+document.addEventListener('copy', e => {
+  e.preventDefault();
+  alert("Không được phép sao chép nội dung!");
+});
   </script>
   <div id="toast" class="toast">📋 Đã sao chép liên kết!</div>
 </body>
